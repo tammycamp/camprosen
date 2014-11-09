@@ -1,0 +1,676 @@
+/**
+ * Justmotion v1.1
+ * One page HTML template
+ * http://axminenko.com
+ *
+ * Copyright 2014 Alexander Axminenko
+ */
+@charset 'UTF-8';
+
+/* Variables */
+@color-primary: #61D2D6;
+
+/* Media Queries: Retina */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+    /* Header */
+    header.main .menu {
+        background-image: url( '../img/menu@2x.png' );
+    }
+
+    /* Welcome */
+    section.welcome {
+        .slider.arrows {
+            a.prev {
+                background-image: url( '../img/arrows/white.left@2x.png' );
+                background-size: 100%;
+            }
+            a.next {
+                background-image: url( '../img/arrows/white.right@2x.png' );
+                background-size: 100%;
+            }
+        }
+    }
+}
+
+/* Media Queries: Responsive */
+@media only screen and (min-width: 960px) and (max-width: 1160px) {
+    /* About Us */
+    section.about {
+        .circles {
+            .row {
+                h1 {
+                    font-size: 4.5em;
+                    padding-top: 45px;
+                }
+            }
+        }
+    }
+
+    /* Services */
+    section.services {
+        .line { padding-top: 40px }
+        .horizontal {
+            .row {
+                .icon {
+                    i { font-size: 1.4em }
+                }
+            }
+        }
+    }
+
+    /* Portfolio */
+    section.portfolio {
+        nav { padding-bottom: 80px }
+    }
+
+    /* Our Team */
+    section.team {
+        .row {
+            margin-top: 60px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    /* Offsets */
+    .offsetTop { padding-top: 80px }
+    .offsetBottom { padding-bottom: 80px }
+
+    /* Header */
+    header.main {
+        nav {
+            ul {
+                li {
+                    a {
+                        padding-left: 8px;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Sections */
+    section:not(.welcome) {
+        > header, > div > header { padding-bottom: 60px }
+    }
+
+    /* About Us */
+    section.about {
+        .circles {
+            .row {
+                h1 {
+                    font-size: 4em;
+                    padding-top: 30px;
+                    padding-bottom: 15px;
+                }
+                span { font-size: 0.9em }
+            }
+        }
+    }
+
+    /* Custom Content */
+    section.custom {
+        .offsetSliderLeft { padding-left: 20px }
+        .offsetSliderRight { padding-right: 20px }
+        header {
+            &.offsetSmall { padding-bottom: 2em }
+        }
+    }
+
+    /* Services */
+    section.services {
+        .line { padding-top: 40px }
+        .horizontal {
+            .row {
+                .icon {
+                    i { font-size: 1.1em }
+                }
+            }
+        }
+        .vertical {
+            &.offset { padding-top: 80px }
+            .row {
+                .icon {
+                    i { font-size: 2em }
+                }
+            }
+        }
+    }
+
+    /* Parallax Sections */
+    section.parallax {
+        header, .icon { padding-bottom: 40px }
+        .slides { padding-top: 40px }
+        &.subscribe {
+            input[type="text"] {
+                width: 60%;
+            }
+        }
+    }
+
+    /* Posts */
+    section.posts {
+        .row {
+            padding-bottom: 20px;
+            header {
+                h6 { padding: 25px 20px 20px }
+            }
+            p { padding: 0 20px }
+            .details { padding: 20px 20px 0 }
+        }
+    }
+
+    /* Portfolio */
+    section.portfolio {
+        nav { padding-bottom: 60px }
+    }
+
+    /* Our Team */
+    section.team {
+        .row {
+            margin-top: 40px;
+            .photo {
+                .hover { .social { font-size: 1.8em } }
+            }
+            .name {
+                margin-top: 2em;
+                span { display: block }
+            }
+        }
+    }
+
+    /* Pricing Tables */
+    section.pricing {
+        .content {
+            .row {
+                .table {
+                    padding: 40px 20px;
+                    header {
+                        :not(span) {
+                            padding-top: 20px;
+                            padding-bottom: 40px;
+                        }
+                    }
+                    ul { li { padding: 10px 0 } }
+                    .button {
+                        margin-top: 35px;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Footer */
+    footer {
+        small {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+    }
+
+    /***** BLOG PAGE *****/
+
+    /* Posts */
+    section.blog {
+        &.header.offsetTop { padding-top: 156px }
+    }
+
+    /* Comments */
+    section.comments { .comment { padding-bottom: 40px } }
+
+    /* Author Info */
+    section.author {
+        .row { header { margin-top: 2em } }
+        .text { padding-top: 30px }
+    }
+}
+@media only screen and (max-width: 767px) {
+    /* General and Typography */
+    p { padding-top: 1.2em }
+
+    /* Offsets */
+    .offsetTop { padding-top: 60px }
+    .offsetBottom { padding-bottom: 60px }
+
+    /* Welcome */
+    section.welcome {
+        .slider.content {
+            h1 {
+                font-size: 5.7em;
+                padding-bottom: 25px;
+            }
+            h2 {
+                font-size: 1.8em;
+                padding-bottom: 20px;
+            }
+            p { padding-bottom: 30px }
+        }
+        .slides { display: none }
+    }
+
+    /* Header */
+    header.main {
+        .menu { display: block }
+        nav {
+            z-index: 3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            padding-right: 0;
+            display: none;
+            &.active { display: block }
+            ul {
+                padding: 0;
+                li {
+                    width: 100%;
+                    padding: 0;
+                    a {
+                        padding: 20px 30px !important;
+                        background-color: #fff;
+                        font-size: 1rem;
+                        &.active { &:hover { color: @color-primary } }
+                        &:hover { background-color: #f9f9f9; color: #404040 }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Sections */
+    section:not(.welcome) {
+        > header, > div > header { padding-bottom: 40px }
+        span.description { padding-top: 30px !important }
+    }
+
+    /* About Us */
+    section.about {
+        .circles {
+            .column3 {
+                width: auto;
+                display: block;
+                &:nth-child(even) { float: right }
+                &:nth-child(1), &:nth-child(2) {
+                    .row { margin-top: 40px }
+                }
+            }
+            .row {
+                margin: 30px 0 0 0;
+                padding-bottom: 190px;
+                width: 190px;
+                h1 {
+                    font-size: 4em;
+                    padding-top: 45px;
+                    padding-bottom: 15px;
+                }
+                span { font-size: 0.9em }
+            }
+        }
+    }
+
+    /* Custom Content */
+    section.custom {
+        .offsetSliderLeft, .offsetSliderRight { padding: 2em 0 0 0 }
+        header { &.offsetSmall { padding-bottom: 2em } }
+        .imageSlider .image img {
+            padding: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+
+    /* Image Slider */
+    .imageSlider { .slides { display: none } }
+
+    /* Services */
+    section.services {
+        .line {
+            padding-top: 0px !important;
+            &:nth-child(1) { padding-top: 5px !important }
+        }
+        .horizontal {
+            .row {
+                .icon {
+                    width: 15%;
+                    padding-bottom: 15%;
+                    margin-top: 40px;
+                    margin-bottom: 30px;
+                }
+                p {
+                    padding: 0;
+                    text-align: center;
+                }
+                &:nth-child(1) { .icon { margin-top: 0 } }
+            }
+            .line + .line { .row { &:nth-child(1) { .icon { margin-top: 40px } } } }
+        }
+        .vertical {
+            &.offset { padding-top: 60px }
+            .row {
+                .icon {
+                    width: 20%;
+                    padding-bottom: 20%;
+                    margin-top: 40px;
+                }
+                h6 { padding-bottom: 20px }
+                p {
+                    padding: 0;
+                    text-align: center;
+                }
+                &:nth-child(1) { .icon { margin-top: 0 } }
+            }
+            .line + .line { .row { &:nth-child(1) { .icon { margin-top: 40px } } } }
+        }
+    }
+
+    /* Parallax Sections */
+    section.parallax {
+        header, .icon { padding-bottom: 40px }
+        .slides { padding-top: 40px }
+        &.subscribe {
+            input[type="text"] {
+                width: 60%;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    /* Posts */
+    section.posts {
+        .row { width: 100% }
+        .content > div:not(:nth-child(1)) {
+            .row { margin-top: 40px }
+        }
+        .more { margin-top: 40px }
+    }
+
+    /* Our Skills */
+    section.skills {
+        .content > div { width: 140px }
+        .row { span { padding-bottom: 30px } }
+    }
+
+    /* Portfolio */
+    section.portfolio {
+        nav {
+            line-height: 1.2em;
+            padding-bottom: 40px;
+        }
+        .content {
+            > div { width: 50% }
+            .row { width: 80% }
+        }
+        .details {
+            .image { width: 95.23809523809524% }
+            .information {
+                padding-top: 30px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    /* Our Team */
+    section.team {
+        .content > div:nth-of-type(-n+2) .row { margin-top: 0 !important }
+        .row {
+            margin-top: 30px !important;
+            .photo {
+                width: 80%;
+                .hover { .social { font-size: 1.8em } }
+            }
+            .name {
+                margin-top: 2em;
+                span { display: block }
+            }
+        }
+        .content > div {
+            width: 210px;
+            float: left;
+        }
+    }
+
+    /* Pricing Tables */
+    section.pricing {
+        .content {
+            > div:first-child .row { margin-top: 0 !important }
+            .row {
+                width: 98.66666666666667%;
+                margin-top: 40px !important;
+                .table {
+                    padding: 30px 20px;
+                    header {
+                        :not(span) {
+                            padding-top: 20px;
+                            padding-bottom: 30px;
+                        }
+                    }
+                    ul { li { padding: 6px 0 } }
+                    .button { margin-top: 25px }
+                }
+            }
+        }
+    }
+
+    /* Get in Touch */
+    section.contact {
+        .content {
+            .row {
+                padding-bottom: 20px !important;
+                textarea { float: none }
+            }
+            .button { margin-top: 10px }
+        }
+    }
+
+    /* Footer */
+    footer {
+        .social {
+            a {
+                i {
+                    width: 50px;
+                    padding: 14px 0;
+                }
+            }
+        }
+        small {
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+    }
+
+    /***** BLOG PAGE *****/
+
+    /* Posts */
+    section.blog {
+        &.header.offsetTop { padding-top: 136px }
+        .post {
+            padding: 30px 0;
+            .image, .imageSlider, iframe { margin-bottom: 30px }
+            header {
+                .details {
+                    padding-top: 15px;
+                    padding-bottom: 30px
+                }
+            }
+        }
+    }
+
+    /* Author Info */
+    section.author {
+        .row {
+            .photo { width: 50% }
+            header { margin-top: 2.5em }
+        }
+        .text { padding-top: 30px }
+    }
+
+    /* Comments */
+    section.comments { .comment { padding-bottom: 30px } }
+
+    /* Comment Form */
+    section.reply {
+        .content {
+            .row { padding-bottom: 10px }
+            .button { margin-top: 20px }
+        }
+    }
+}
+@media only screen and (max-width: 479px) {
+    /* Offsets */
+    .offsetTop { padding-top: 40px }
+    .offsetBottom { padding-bottom: 40px }
+
+    /* Welcome */
+    section.welcome {
+        .slider.content {
+            h1 { padding-bottom: 30px }
+            h2 { padding-bottom: 30px }
+            p { padding-bottom: 40px }
+        }
+        .slider.arrows { display: none }
+    }
+
+    /* About Us */
+    section.about {
+        .circles {
+            .column3 {
+                width: auto;
+                display: block;
+                &:nth-child(even) { float: right }
+                &:nth-child(1), &:nth-child(2) {
+                    .row { margin-top: 40px }
+                }
+            }
+            .row {
+                margin-top: 20px;
+                padding-bottom: 135px;
+                width: 135px;
+                h1 {
+                    font-size: 2.5em;
+                    padding-top: 35px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    /* Services */
+    section.services {
+        .line { padding-top: 0 !important }
+        .horizontal {
+            .row {
+                .icon {
+                    width: 20%;
+                    padding-bottom: 20%;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    font-size: 0.9em;
+                }
+                p {
+                    padding: 0;
+                    text-align: center;
+                }
+                &:nth-child(1) { .icon { margin-top: 0 } }
+            }
+            .line + .line { .row { &:nth-child(1) { .icon { margin-top: 30px } } } }
+        }
+        .vertical {
+            .row {
+                .icon {
+                    width: 25%;
+                    padding-bottom: 25%;
+                    margin-top: 40px;
+                    font-size: 0.9em;
+                }
+                p {
+                    padding: 0;
+                    text-align: center;
+                }
+                &:nth-child(1) { .icon { margin-top: 0 } }
+            }
+            .line + .line { .row { &:nth-child(1) { .icon { margin-top: 30px } } } }
+        }
+    }
+
+    /* Posts */
+    section.posts {
+        .row {
+            padding-bottom: 20px;
+            header {
+                h6 { padding: 25px 20px 20px }
+            }
+            p { padding: 0 20px }
+            .details { padding: 20px 20px 0 }
+        }
+    }
+
+    /* Portfolio */
+    section.portfolio { .details { .image { width: 93.33333333333333% } } }
+
+    /* Our Skills */
+    section.skills { .content > div { width: 100px } }
+
+    /* Our Team */
+    section.team {
+        .row {
+            .photo { .hover { .social { font-size: 1.5em } } }
+            .name { margin-top: 1em }
+        }
+        .content > div { width: 150px }
+    }
+
+    /* Get in Touch */
+    section.contact {
+        .content {
+            .row {
+                width: 100%;
+                .field, textarea { width: 83.33333333333333% }
+            }
+        }
+    }
+
+    /* Footer */
+    footer {
+        small {
+            padding-bottom: 40px;
+        }
+    }
+
+    /***** BLOG PAGE *****/
+
+    /* Posts */
+    section.blog {
+        &.header.offsetTop { padding-top: 116px }
+    }
+
+    /* Author Info */
+    section.author {
+        .row { header { margin-top: 2em } }
+        .text { padding-top: 25px }
+    }
+
+    /* Comments */
+    section.comments {
+        .comment {
+            .details {
+                > div { padding-top: 0 }
+                .date, .reply { padding-top: 9px }
+            }
+        }
+    }
+
+    /* Comment Form */
+    section.reply {
+        .content {
+            .row {
+                width: 100%;
+                input.field, textarea { width: 83.33333333333333% }
+            }
+        }
+    }
+}

@@ -1,0 +1,637 @@
+/**
+ * Justmotion v1.1
+ * One page HTML template
+ * http://axminenko.com
+ *
+ * Copyright 2014 Alexander Axminenko
+ */
+@charset 'UTF-8';
+/* Variables */
+/* Media Queries: Retina */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  /* Header */
+  header.main .menu {
+    background-image: url('../img/menu@2x.png');
+  }
+  /* Welcome */
+  section.welcome .slider.arrows a.prev {
+    background-image: url('../img/arrows/white.left@2x.png');
+    background-size: 100%;
+  }
+  section.welcome .slider.arrows a.next {
+    background-image: url('../img/arrows/white.right@2x.png');
+    background-size: 100%;
+  }
+}
+/* Media Queries: Responsive */
+@media only screen and (min-width: 960px) and (max-width: 1160px) {
+  /* About Us */
+  section.about .circles .row h1 {
+    font-size: 4.5em;
+    padding-top: 45px;
+  }
+  /* Services */
+  section.services .line {
+    padding-top: 40px;
+  }
+  section.services .horizontal .row .icon i {
+    font-size: 1.4em;
+  }
+  /* Portfolio */
+  section.portfolio nav {
+    padding-bottom: 80px;
+  }
+  /* Our Team */
+  section.team .row {
+    margin-top: 60px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* Offsets */
+  .offsetTop {
+    padding-top: 80px;
+  }
+  .offsetBottom {
+    padding-bottom: 80px;
+  }
+  /* Header */
+  header.main nav ul li a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  /* Sections */
+  section:not(.welcome) > header,
+  section:not(.welcome) > div > header {
+    padding-bottom: 60px;
+  }
+  /* About Us */
+  section.about .circles .row h1 {
+    font-size: 4em;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  section.about .circles .row span {
+    font-size: 0.9em;
+  }
+  /* Custom Content */
+  section.custom .offsetSliderLeft {
+    padding-left: 20px;
+  }
+  section.custom .offsetSliderRight {
+    padding-right: 20px;
+  }
+  section.custom header.offsetSmall {
+    padding-bottom: 2em;
+  }
+  /* Services */
+  section.services .line {
+    padding-top: 40px;
+  }
+  section.services .horizontal .row .icon i {
+    font-size: 1.1em;
+  }
+  section.services .vertical.offset {
+    padding-top: 80px;
+  }
+  section.services .vertical .row .icon i {
+    font-size: 2em;
+  }
+  /* Parallax Sections */
+  section.parallax header,
+  section.parallax .icon {
+    padding-bottom: 40px;
+  }
+  section.parallax .slides {
+    padding-top: 40px;
+  }
+  section.parallax.subscribe input[type="text"] {
+    width: 60%;
+  }
+  /* Posts */
+  section.posts .row {
+    padding-bottom: 20px;
+  }
+  section.posts .row header h6 {
+    padding: 25px 20px 20px;
+  }
+  section.posts .row p {
+    padding: 0 20px;
+  }
+  section.posts .row .details {
+    padding: 20px 20px 0;
+  }
+  /* Portfolio */
+  section.portfolio nav {
+    padding-bottom: 60px;
+  }
+  /* Our Team */
+  section.team .row {
+    margin-top: 40px;
+  }
+  section.team .row .photo .hover .social {
+    font-size: 1.8em;
+  }
+  section.team .row .name {
+    margin-top: 2em;
+  }
+  section.team .row .name span {
+    display: block;
+  }
+  /* Pricing Tables */
+  section.pricing .content .row .table {
+    padding: 40px 20px;
+  }
+  section.pricing .content .row .table header :not(span) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  section.pricing .content .row .table ul li {
+    padding: 10px 0;
+  }
+  section.pricing .content .row .table .button {
+    margin-top: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  /* Footer */
+  footer small {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  /***** BLOG PAGE *****/
+  /* Posts */
+  section.blog.header.offsetTop {
+    padding-top: 156px;
+  }
+  /* Comments */
+  section.comments .comment {
+    padding-bottom: 40px;
+  }
+  /* Author Info */
+  section.author .row header {
+    margin-top: 2em;
+  }
+  section.author .text {
+    padding-top: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* General and Typography */
+  p {
+    padding-top: 1.2em;
+  }
+  /* Offsets */
+  .offsetTop {
+    padding-top: 60px;
+  }
+  .offsetBottom {
+    padding-bottom: 60px;
+  }
+  /* Welcome */
+  section.welcome .slider.content h1 {
+    font-size: 5.7em;
+    padding-bottom: 25px;
+  }
+  section.welcome .slider.content h2 {
+    font-size: 1.8em;
+    padding-bottom: 20px;
+  }
+  section.welcome .slider.content p {
+    padding-bottom: 30px;
+  }
+  section.welcome .slides {
+    display: none;
+  }
+  /* Header */
+  header.main .menu {
+    display: block;
+  }
+  header.main nav {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding-right: 0;
+    display: none;
+  }
+  header.main nav.active {
+    display: block;
+  }
+  header.main nav ul {
+    padding: 0;
+  }
+  header.main nav ul li {
+    width: 100%;
+    padding: 0;
+  }
+  header.main nav ul li a {
+    padding: 20px 30px !important;
+    background-color: #fff;
+    font-size: 1rem;
+  }
+  header.main nav ul li a.active:hover {
+    color: #61d2d6;
+  }
+  header.main nav ul li a:hover {
+    background-color: #f9f9f9;
+    color: #404040;
+  }
+  /* Sections */
+  section:not(.welcome) > header,
+  section:not(.welcome) > div > header {
+    padding-bottom: 40px;
+  }
+  section:not(.welcome) span.description {
+    padding-top: 30px !important;
+  }
+  /* About Us */
+  section.about .circles .column3 {
+    width: auto;
+    display: block;
+  }
+  section.about .circles .column3:nth-child(even) {
+    float: right;
+  }
+  section.about .circles .column3:nth-child(1) .row,
+  section.about .circles .column3:nth-child(2) .row {
+    margin-top: 40px;
+  }
+  section.about .circles .row {
+    margin: 30px 0 0 0;
+    padding-bottom: 190px;
+    width: 190px;
+  }
+  section.about .circles .row h1 {
+    font-size: 4em;
+    padding-top: 45px;
+    padding-bottom: 15px;
+  }
+  section.about .circles .row span {
+    font-size: 0.9em;
+  }
+  /* Custom Content */
+  section.custom .offsetSliderLeft,
+  section.custom .offsetSliderRight {
+    padding: 2em 0 0 0;
+  }
+  section.custom header.offsetSmall {
+    padding-bottom: 2em;
+  }
+  section.custom .imageSlider .image img {
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  /* Image Slider */
+  .imageSlider .slides {
+    display: none;
+  }
+  /* Services */
+  section.services .line {
+    padding-top: 0px !important;
+  }
+  section.services .line:nth-child(1) {
+    padding-top: 5px !important;
+  }
+  section.services .horizontal .row .icon {
+    width: 15%;
+    padding-bottom: 15%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  section.services .horizontal .row p {
+    padding: 0;
+    text-align: center;
+  }
+  section.services .horizontal .row:nth-child(1) .icon {
+    margin-top: 0;
+  }
+  section.services .horizontal .line + .line .row:nth-child(1) .icon {
+    margin-top: 40px;
+  }
+  section.services .vertical.offset {
+    padding-top: 60px;
+  }
+  section.services .vertical .row .icon {
+    width: 20%;
+    padding-bottom: 20%;
+    margin-top: 40px;
+  }
+  section.services .vertical .row h6 {
+    padding-bottom: 20px;
+  }
+  section.services .vertical .row p {
+    padding: 0;
+    text-align: center;
+  }
+  section.services .vertical .row:nth-child(1) .icon {
+    margin-top: 0;
+  }
+  section.services .vertical .line + .line .row:nth-child(1) .icon {
+    margin-top: 40px;
+  }
+  /* Parallax Sections */
+  section.parallax header,
+  section.parallax .icon {
+    padding-bottom: 40px;
+  }
+  section.parallax .slides {
+    padding-top: 40px;
+  }
+  section.parallax.subscribe input[type="text"] {
+    width: 60%;
+    margin-top: 40px;
+  }
+  /* Posts */
+  section.posts .row {
+    width: 100%;
+  }
+  section.posts .content > div:not( :nth-child(1)) .row {
+    margin-top: 40px;
+  }
+  section.posts .more {
+    margin-top: 40px;
+  }
+  /* Our Skills */
+  section.skills .content > div {
+    width: 140px;
+  }
+  section.skills .row span {
+    padding-bottom: 30px;
+  }
+  /* Portfolio */
+  section.portfolio nav {
+    line-height: 1.2em;
+    padding-bottom: 40px;
+  }
+  section.portfolio .content > div {
+    width: 50%;
+  }
+  section.portfolio .content .row {
+    width: 80%;
+  }
+  section.portfolio .details .image {
+    width: 95.23809523809524%;
+  }
+  section.portfolio .details .information {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* Our Team */
+  section.team .content > div:nth-of-type(-n+2) .row {
+    margin-top: 0 !important;
+  }
+  section.team .row {
+    margin-top: 30px !important;
+  }
+  section.team .row .photo {
+    width: 80%;
+  }
+  section.team .row .photo .hover .social {
+    font-size: 1.8em;
+  }
+  section.team .row .name {
+    margin-top: 2em;
+  }
+  section.team .row .name span {
+    display: block;
+  }
+  section.team .content > div {
+    width: 210px;
+    float: left;
+  }
+  /* Pricing Tables */
+  section.pricing .content > div:first-child .row {
+    margin-top: 0 !important;
+  }
+  section.pricing .content .row {
+    width: 98.66666666666667%;
+    margin-top: 40px !important;
+  }
+  section.pricing .content .row .table {
+    padding: 30px 20px;
+  }
+  section.pricing .content .row .table header :not(span) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  section.pricing .content .row .table ul li {
+    padding: 6px 0;
+  }
+  section.pricing .content .row .table .button {
+    margin-top: 25px;
+  }
+  /* Get in Touch */
+  section.contact .content .row {
+    padding-bottom: 20px !important;
+  }
+  section.contact .content .row textarea {
+    float: none;
+  }
+  section.contact .content .button {
+    margin-top: 10px;
+  }
+  /* Footer */
+  footer .social a i {
+    width: 50px;
+    padding: 14px 0;
+  }
+  footer small {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  /***** BLOG PAGE *****/
+  /* Posts */
+  section.blog.header.offsetTop {
+    padding-top: 136px;
+  }
+  section.blog .post {
+    padding: 30px 0;
+  }
+  section.blog .post .image,
+  section.blog .post .imageSlider,
+  section.blog .post iframe {
+    margin-bottom: 30px;
+  }
+  section.blog .post header .details {
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+  /* Author Info */
+  section.author .row .photo {
+    width: 50%;
+  }
+  section.author .row header {
+    margin-top: 2.5em;
+  }
+  section.author .text {
+    padding-top: 30px;
+  }
+  /* Comments */
+  section.comments .comment {
+    padding-bottom: 30px;
+  }
+  /* Comment Form */
+  section.reply .content .row {
+    padding-bottom: 10px;
+  }
+  section.reply .content .button {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* Offsets */
+  .offsetTop {
+    padding-top: 40px;
+  }
+  .offsetBottom {
+    padding-bottom: 40px;
+  }
+  /* Welcome */
+  section.welcome .slider.content h1 {
+    padding-bottom: 30px;
+  }
+  section.welcome .slider.content h2 {
+    padding-bottom: 30px;
+  }
+  section.welcome .slider.content p {
+    padding-bottom: 40px;
+  }
+  section.welcome .slider.arrows {
+    display: none;
+  }
+  /* About Us */
+  section.about .circles .column3 {
+    width: auto;
+    display: block;
+  }
+  section.about .circles .column3:nth-child(even) {
+    float: right;
+  }
+  section.about .circles .column3:nth-child(1) .row,
+  section.about .circles .column3:nth-child(2) .row {
+    margin-top: 40px;
+  }
+  section.about .circles .row {
+    margin-top: 20px;
+    padding-bottom: 135px;
+    width: 135px;
+  }
+  section.about .circles .row h1 {
+    font-size: 2.5em;
+    padding-top: 35px;
+    padding-bottom: 10px;
+  }
+  /* Services */
+  section.services .line {
+    padding-top: 0 !important;
+  }
+  section.services .horizontal .row .icon {
+    width: 20%;
+    padding-bottom: 20%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+  }
+  section.services .horizontal .row p {
+    padding: 0;
+    text-align: center;
+  }
+  section.services .horizontal .row:nth-child(1) .icon {
+    margin-top: 0;
+  }
+  section.services .horizontal .line + .line .row:nth-child(1) .icon {
+    margin-top: 30px;
+  }
+  section.services .vertical .row .icon {
+    width: 25%;
+    padding-bottom: 25%;
+    margin-top: 40px;
+    font-size: 0.9em;
+  }
+  section.services .vertical .row p {
+    padding: 0;
+    text-align: center;
+  }
+  section.services .vertical .row:nth-child(1) .icon {
+    margin-top: 0;
+  }
+  section.services .vertical .line + .line .row:nth-child(1) .icon {
+    margin-top: 30px;
+  }
+  /* Posts */
+  section.posts .row {
+    padding-bottom: 20px;
+  }
+  section.posts .row header h6 {
+    padding: 25px 20px 20px;
+  }
+  section.posts .row p {
+    padding: 0 20px;
+  }
+  section.posts .row .details {
+    padding: 20px 20px 0;
+  }
+  /* Portfolio */
+  section.portfolio .details .image {
+    width: 93.33333333333333%;
+  }
+  /* Our Skills */
+  section.skills .content > div {
+    width: 100px;
+  }
+  /* Our Team */
+  section.team .row .photo .hover .social {
+    font-size: 1.5em;
+  }
+  section.team .row .name {
+    margin-top: 1em;
+  }
+  section.team .content > div {
+    width: 150px;
+  }
+  /* Get in Touch */
+  section.contact .content .row {
+    width: 100%;
+  }
+  section.contact .content .row .field,
+  section.contact .content .row textarea {
+    width: 83.33333333333333%;
+  }
+  /* Footer */
+  footer small {
+    padding-bottom: 40px;
+  }
+  /***** BLOG PAGE *****/
+  /* Posts */
+  section.blog.header.offsetTop {
+    padding-top: 116px;
+  }
+  /* Author Info */
+  section.author .row header {
+    margin-top: 2em;
+  }
+  section.author .text {
+    padding-top: 25px;
+  }
+  /* Comments */
+  section.comments .comment .details > div {
+    padding-top: 0;
+  }
+  section.comments .comment .details .date,
+  section.comments .comment .details .reply {
+    padding-top: 9px;
+  }
+  /* Comment Form */
+  section.reply .content .row {
+    width: 100%;
+  }
+  section.reply .content .row input.field,
+  section.reply .content .row textarea {
+    width: 83.33333333333333%;
+  }
+}
